@@ -70,6 +70,13 @@ ifconfig
 VBoxManage guestproperty enumerate "default" | findstr IP
 ```
 
+コマンド実行結果：
+```
+Name: /VirtualBox/GuestInfo/Net/0/V4/IP, value: 10.0.2.15, timestamp: 1599918604633024103, flags:
+Name: /VirtualBox/GuestInfo/Net/2/V4/IP, value: 172.17.0.1, timestamp: 1599918604635956100, flags:
+Name: /VirtualBox/GuestInfo/Net/1/V4/IP, value: 192.168.99.100, timestamp: 1599918604634001203, flags:
+```
+
 ## Docker コンテナを起動してみる
 試しに DB コンテナを起動してみる。今回は、以下のリポジトリを使って MySQL を動かす。
 
@@ -112,7 +119,7 @@ docker-compose up -d
 
 DB コンテナが起動状態は、Kitematic に表示される。
 
-![Kitematic に表示された起動 DB コンテナ](./display_db_container_on_kitematic)
+![Kitematic に表示された起動 DB コンテナ](./display_db_container_on_kitematic.png)
 
 
 
