@@ -129,5 +129,42 @@ DB コンテナが起動状態は、Kitematic に表示される。
 docker-compose up
 ```
 
+## その他の Docker コンテナ制御コマンド
 
+### Docker コンテナの停止
+
+```bash
+docker-compose stop
+```
+
+### Docker コンテナの停止・削除（DBデータごと削除されます）
+
+```bash
+docker-compose down
+```
+
+### Docker コンテナの停止・削除（永続化データを含めて削除）
+
+```bash
+docker-compose down --volume
+```
+
+### Docker コンテナの停止のみ（DBデータは永続化されます）
+
+```bash
+docker-compose stop
+```
+
+### Docker コンテナ内にログイン
+
+```bash
+docker-compose exec db bash
+```
+
+```bash
+# Docker コンテナ内にログインできた場合の待ち受け状態のターミナル
+root@db-server:/#
+```
+
+### Docker コンテナ内からログアウト
 
