@@ -59,6 +59,12 @@ ifconfig
 
 ![VirtualBox の default VM のコンソール画面](./virtualbox_default_vm_console.png)
 
+また、このようなネットワーク情報は、以下のコマンドで PowerShell などで見ることもできる。
+
+```console
+VBoxManage guestproperty enumerate "default" | findstr IP
+```
+
 ## Docker コンテナを起動してみる
 
 
