@@ -9,7 +9,7 @@ VirtualBox がまだインストールされていない場合は、Chocolatey �
 
 Chocolatey を導入していない場合は、以下を参照する。
 
-Chocolatey のインストール方法：
+Chocolatey のインストール方法：  
 https://github.com/fs5013-furi-sutao/explain.how_to_install_chocolatey
 
 インストールするには、管理者で開いた PowerShell で以下のコマンドを実行する。
@@ -71,9 +71,48 @@ VBoxManage guestproperty enumerate "default" | findstr IP
 ```
 
 ## Docker コンテナを起動してみる
+試しに DB コンテナを起動してみる。今回は、以下のリポジトリを使って MySQL を動かす。
 
+MySQL 8.0 コンテナの Docker Compose ファイル：  
+https://github.com/fs5013-furi-sutao/fsedu.mysql.8.0
 
+作業をしたいディレクトリに移動し、Git Bash で以下のコマンドを実行してリポジトリをクローンする。
 
+```console
+git clone https://github.com/fs5013-furi-sutao/fsedu.mysql.8.0.git
+```
+
+これで Docker を起動させるためのファイルは準備できたのだが、通常の PowerShell やコマンドプロンプト、Git Bash などでは、Docker を起動させるコマンドを実行できない。
+
+Docker コマンドを実行するには、Docker CLI を利用する。
+
+## Docker CLI
+Docker CLI を起動するボタンは、Kitematic にある。Kitematic 画面の左下コーナーを見ると「Docker CLI」というボタンがあるので、これをクリックする。
+
+![Kitematic にある Docker CLI ボタン](./docker_cli_button.png)
+
+Docker CLI ボタンを押すと、PowerShell が開く。この画面からのみ Docker コマンドを実行できる。
+
+注意してほしいのは、通常の PowerShell では Docker コマンドを実行できない（Docker deamon につながらない）こと。Docker Toolbox 環境で Docker コマンドを実行したい場合は、必ずこの Kitematic の Docker CLI から実行する。
+
+## Docker Compose の実行
+まずはクローンしたリポジトリ内に移動する。デスクトップにリポジトリをクローンした場合は以下のようになる。
+
+```console
+cd C:\Users\＜ユーザ名＞\Desktop\fsedu.mysql.8.0\
+```
+
+そして、docker-compose コマンドで DB コンテナを起動させる。
+
+```console
+docker-compose up -d
+```
+
+`-d` オプションを付与することで、プロセスはコンソールに返され（コンソールを入力できる状態になることで分かる）、Docker コンテナの起動はバックグラウンドプロセスで行われる。
+
+DB コンテナが起動状態は、Kitematic に表示される。
+
+![Kitematic に表示された起動 DB コンテナ](./display_db_container_on_kitematic)
 
 
 
