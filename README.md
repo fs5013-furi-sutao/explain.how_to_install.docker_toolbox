@@ -3,6 +3,35 @@
 ここでは、Docker Toolbox で docker-compose ファイルを使ってコンテナを起動するところまで確認する。
 
 ## Docker Toolbox とは 
+Docker Toolbox は、Docker Desktop for Windows アプリの最小システム要件を満たさない Windows システムで Docker を使用できるようにしてくれる ツール群のことである。
+
+Docker Desktop for Windows アプリの最小システム要件は、Windows 10 Pro、Enterprise、Education エディションなので、一般的な Windows 10 Home エディションでは Docker Desktop for Windows は使えない。
+
+Home エディションで通常の Docker が使えない理由は、Windows の仮想化機能 Hyper-V が使えないからである。
+
+## Windows 10 バージョン 2004 以降について
+ただし、Windows 10 のバージョン 2004 以降からは Home エディションでも Docker Desktop for Windows が使えるようになっている。
+
+理由は、バージョン 2004 では WSL2 という機能を利用することで、Docker Desktop for Windows を使えるようになったためだ。 
+
+WSL という Windows 内で仮想 Linux サーバを再現する技術（Windows Subsystem for Linux）を、バージョン 2004 では新規に WSL2 に更新することができる。
+
+`2004` というバージョン番号の表記だが、これは `2020` 年の `04` 月期を意味している。
+
+バージョン 2004 は 2020 年 5 月に向けて開発されたバージョンだが、2020 年 9 月 13 日の時点で一般的な Windows Update では、まだバージョン 2004 に更新されていない（Windows 10の新機能を公開前に試せる Windows Insider Program に参加している場合はバージョン 2004 が利用できている）。
+
+## Windows 10 のバージョン確認方法
+PowerSell で以下のコマンドを実行すると、新規ウィンドウが開き、バージョンを確認することができる。
+
+```console 
+winver
+```
+
+以下の参考画面では、左がバージョン 1909 （2019 年 9 月期）で、右がバージョン 2004（2020 年 4 月期）となっている。
+
+バージョン 2004 以降なら Home エディションでも Docker Desktop for Windows を使うようにする。まだバージョンが 2004 に満たない場合は、以降の手順にしたがって Docker Toolbox を導入して Docker コンテナを利用できるようにする。
+
+![winver コマンドで表示される Windows のバージョン確認ウィンドウ](./winver_compare_1909_2004.png)
 
 ## VirtualBox のインストール
 VirtualBox がまだインストールされていない場合は、Chocolatey で VirtualBox をインストールする。
