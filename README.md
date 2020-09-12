@@ -30,7 +30,22 @@ scoop install docker docker-machine docker-compose
 
 これらのモジュールを Scoop でインストールすると、Docker Toolbox の GUI である Kitematic が同時にインストールされる。
 
-## 
+## Kitematic の起動
 インストールされた Kitematic を起動する。
 
-![Kitematic の初回起動](./kitematic_first_run.png)
+![Kitematic の初回起動](./kitematic_first_run.png) 
+
+## Docker Toolbox でのコンテナ構造
+レガシーな（2004 より前のバージョン）Windows 10 では、Docker Toolbox を使う。
+
+通常の Linux 向けの Docker と違い、Docker Toolbox は VirtualBox で作った default という初期 Virtual Machine の上に Docker コンテナを構築する。
+
+そのため、Docker コンテナへ接続できる IP アドレスも、この default VM の IP アドレスになる。
+
+## default VM の IP アドレスの確認方法
+default VM の IP アドレスを確認するには、VirtualBox を立ち上げる。
+
+![VirtualBox のホーム画面](./virtualbox_home.png)
+
+
+
