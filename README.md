@@ -45,7 +45,24 @@ scoop install docker docker-machine docker-compose
 ## default VM の IP アドレスの確認方法
 default VM の IP アドレスを確認するには、VirtualBox を立ち上げる。
 
+以下の VirtualBox のホーム画面を見て分かる通り、Kitematic の初回起動により、default という VM が作成・実行されていることが分かる。
+
 ![VirtualBox のホーム画面](./virtualbox_home.png)
+
+この default をダブルクリックすることで、default VM のコンソール画面が表示される。コンソールに、以下のコマンドを実行し、IP アドレスの情報を表示させる。
+
+```console
+ifconfig
+```
+
+以下の場合、default VM の IP アドレスが `192.168.99.100` であることが分かる。
+
+![VirtualBox の default VM のコンソール画面](./virtualbox_default_vm_console.png)
+
+## Docker コンテナを起動してみる
+
+
+
 
 
 
