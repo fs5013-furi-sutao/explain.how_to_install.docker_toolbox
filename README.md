@@ -27,3 +27,10 @@ Docker Toolbox を使うには、以下の 3 つのモジュールが必要に�
 ```console
 scoop install docker docker-machine docker-compose
 ```
+
+これらのモジュールを Scoop でインストールすると、Docker Toolbox の GUI である Kitematic が同時にインストールされる。
+
+## 
+インストールされた Kitematic を起動する。
+
+![Kitematic の初回起動](./kitematic_first_run.png)
