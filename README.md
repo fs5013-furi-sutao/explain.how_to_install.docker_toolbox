@@ -33,6 +33,8 @@ winver
 
 ![winver コマンドで表示される Windows のバージョン確認ウィンドウ](./winver_compare_1909_2004.png)
 
+Docker Toolbox は、VirtualBox と 2 つの Docker モジュール（docker、docker-machine）を揃えることで利用できるようになる。また、複数のコンテナを 1 つの設定ファイルで簡単に管理できるようになる Docker Compose という機能を使うために、今回は docker-compose モジュールもインストールしておく。 
+
 ## VirtualBox のインストール
 VirtualBox がまだインストールされていない場合は、Chocolatey で VirtualBox をインストールする。
 
