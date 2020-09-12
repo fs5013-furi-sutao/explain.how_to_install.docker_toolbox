@@ -7,6 +7,11 @@
 ## VirtualBox のインストール
 VirtualBox がまだインストールされていない場合は、Chocolatey で VirtualBox をインストールする。
 
+Chocolatey を導入していない場合は、以下を参照する。
+
+Chocolatey のインストール方法：
+https://github.com/fs5013-furi-sutao/explain.how_to_install_chocolatey
+
 インストールするには、管理者で開いた PowerShell で以下のコマンドを実行する。
 
 ```console
