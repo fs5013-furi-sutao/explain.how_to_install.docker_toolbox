@@ -133,38 +133,42 @@ docker-compose up
 
 ### Docker コンテナの停止
 
-```bash
+```console
 docker-compose stop
 ```
 
-### Docker コンテナの停止・削除（DBデータごと削除されます）
+### Docker コンテナの停止・削除（DBデータごと削除される）
 
-```bash
+```console
 docker-compose down
 ```
 
-### Docker コンテナの停止・削除（永続化データを含めて削除）
+Volume にマウントして永続化しているデータまで削除するには `--volume` オプションを付与する。
 
-```bash
+```console
 docker-compose down --volume
 ```
 
-### Docker コンテナの停止のみ（DBデータは永続化されます）
+### Docker コンテナの停止のみ
 
-```bash
+```console
 docker-compose stop
 ```
 
-### Docker コンテナ内にログイン
-
-```bash
+### Docker コンテナ内への操作
+以下は、`db` コンテナにログインする場合のコマンド
+```console
 docker-compose exec db bash
 ```
 
-```bash
+```console
 # Docker コンテナ内にログインできた場合の待ち受け状態のターミナル
 root@db-server:/#
 ```
 
-### Docker コンテナ内からログアウト
+Docker コンテナ内からログアウトするコマンド
+```console
+exit
+```
+
 
