@@ -111,6 +111,7 @@ cd C:\Users\＜ユーザ名＞\Desktop\fsedu.mysql.8.0\
 
 そして、docker-compose コマンドで DB コンテナを起動させる。
 
+バックグラウンドプロセスで Docker コンテナを起動：
 ```console
 docker-compose up -d
 ```
@@ -120,6 +121,13 @@ docker-compose up -d
 DB コンテナが起動状態は、Kitematic に表示される。
 
 ![Kitematic に表示された起動 DB コンテナ](./display_db_container_on_kitematic.png)
+
+ただし、`-d` オプションを付けてバックグラウンドで Docker を起動させた場合は、コマンドの詳細な実行ログがコンソールに表示されない。Docker コンテナが正常に起動できない場合は、原因をログから調べるために `-d`　オプションなしで docker-compose up コマンドを実行すると良い。
+
+詳細ログを表示させて Docker コンテナを起動：
+```console
+docker-compose up
+```
 
 
 
