@@ -3,7 +3,7 @@
 ここでは、Docker Toolbox で docker-compose ファイルを使ってコンテナを起動するところまで確認する。
 
 ## Docker Toolbox とは 
-Docker Toolbox は、Docker Desktop for Windows アプリの最小システム要件を満たさない Windows システムで Docker を使用できるようにしてくれる ツール群のことである。
+Docker Toolbox は、Docker Desktop for Windows アプリの最小システム要件を満たさない Windows システムで Docker を使用できるようにするツール群のことである。
 
 Docker Desktop for Windows アプリの最小システム要件は、Windows 10 Pro、Enterprise、Education エディションなので、一般的な Windows 10 Home エディションでは Docker Desktop for Windows は使えない。
 
