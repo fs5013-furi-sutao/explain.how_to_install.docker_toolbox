@@ -59,6 +59,10 @@ Docker Toolbox を使うには、以下の 3 つのモジュールが必要に�
 
 今回はこれらを scoop でインストールする。
 
+Scoop を導入していない場合は、以下のを参照する。
+
+Scoop とは（メリットと使い方）：  
+https://github.com/fs5013-furi-sutao/explain.scoop
 
 すでに Scoop を導入している場合は、以下のコマンドで Docker の3つのモジュールを一度にインストールができる。
 
