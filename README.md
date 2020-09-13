@@ -5,7 +5,7 @@
 ## 注意
 このページでは、レガシー Windows 10 向けの Docker Toolbox についての説明をしています。  
 
-Windows 10 Home バージョン 2004 以降の端末では、Docker Desktop for Windows を利用してください。
+**Windows 10 Home バージョン 2004 以降の端末では、Docker Desktop for Windows を利用してください。**
 
 ## Docker Toolbox とは 
 Docker Toolbox は、Docker Desktop for Windows アプリの最小システム要件を満たさない Windows システムで Docker を使用できるようにするツール群のことである。
