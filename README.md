@@ -191,6 +191,17 @@ docker-compose down --volume
 ```console
 docker-compose stop
 ```
+### docker-compose.yml の設定を表示
+
+```console
+docker-compose config
+```
+
+### Docker Compose のプロセスを表示
+
+```console
+docker-compose ps
+```
 
 ### Docker コンテナ内への操作
 以下は、`db` コンテナにログインする場合のコマンド
