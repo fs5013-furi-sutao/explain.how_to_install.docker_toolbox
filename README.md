@@ -2,6 +2,11 @@
 レガシーな Windows 向けの Docker マネージメントツール、Docker Toolbox について説明する。
 ここでは、Docker Toolbox で docker-compose ファイルを使ってコンテナを起動するところまで確認する。
 
+## 注意
+このページでは、レガシー Windows 10 向けの Docker Toolbox についての説明をしています。  
+
+Windows 10 Home バージョン 2004 以降の端末では、Docker Desktop for Windows を利用してください。
+
 ## Docker Toolbox とは 
 Docker Toolbox は、Docker Desktop for Windows アプリの最小システム要件を満たさない Windows システムで Docker を使用できるようにするツール群のことである。
 
